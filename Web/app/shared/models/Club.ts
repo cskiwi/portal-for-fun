@@ -5,7 +5,9 @@ namespace app {
         name: string;
         slug: string;
         description: string;
+        country: string;
         users: Array<{}>;
+        
 
         constructor(data: any) {
             super();
