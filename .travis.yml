@@ -1,0 +1,24 @@
+sudo: required
+language: node_js
+node_js:
+  - '4.5'
+cache:
+  directories:
+    - node_modules
+    - vendor
+    - bower_components
+    - typings
+
+install:
+  - echo "Installing tools!"
+  - npm install -g firebase-tools bower typings
+
+before_script:
+  - echo "Installing required stuff!"
+  - cd Web && npm i && typings i --global && bower i && cd ..
+
+script:
+  - echo "Building!"
+  - cd Web && npm run build && cd ..
+
+after_success: .travis/deploy.sh
