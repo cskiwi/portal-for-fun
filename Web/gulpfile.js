@@ -12,7 +12,7 @@ var $ = require('gulp-load-plugins')({
         'main-bower-files',
         'uglify-save-license',
         'del',
-        'merge-stream',
+        'merge-stream', 
         'run-sequence'
     ]
 });
