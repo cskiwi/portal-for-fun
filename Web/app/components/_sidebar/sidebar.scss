@@ -1,0 +1,29 @@
+@import '../_global/styles/variables';
+
+#sidebar {
+  overflow: hidden;
+  max-width: 250px;
+  
+  md-content { 
+      md-list-item {
+      border-radius: 2px;
+
+      & > a {
+        margin: 0;
+      }
+
+      &.active {
+        color: $sidebar-active-color;
+        background-color: $sidebar-active-background-color;
+      }
+
+      img {
+        max-height: 40px;
+      }
+
+      p {
+        padding-left: 10px;
+      }
+    }
+  }
+}

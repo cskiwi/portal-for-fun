@@ -1,0 +1,9 @@
+{
+    "name": "portal.for.fun",
+    "version": "0.0.1",
+    "description": "A portal for sporters",
+    "main": "index.js",
+    "keywords": [ ],
+    "author": "cskiwi",
+    "license": "ISC"
+}

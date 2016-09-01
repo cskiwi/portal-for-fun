@@ -1,0 +1,24 @@
+@import '../_global/styles/variables';
+
+header {
+    color: $navbar-color-text;
+
+    > md-toolbar, .md-toolbar-tools {
+        height: $navbar-height;
+        max-height: $navbar-height;
+
+        .md-menu {
+            margin: 0;
+    }
+  }
+
+    #top-bar {
+        z-index: 10;
+        background-color: $navbar-color;
+        color: $navbar-color-text;
+
+        .nav-icon-container {
+            width: 50px;
+    }
+  }
+}

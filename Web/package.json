@@ -1,0 +1,59 @@
+{
+  "name": "portal-for-fun",
+  "version": "0.0.1",
+  "description": "A portal for sporters",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build --prod",
+    "test": "gulp analyze",
+    "dev": "gulp dev --verbose",
+    "pack": "build",
+    "dist": "build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "2.14.3",
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-angular-templatecache": "2.0.0",
+    "gulp-cached": "1.1.0",
+    "gulp-concat": "2.6.0",
+    "gulp-filter": "4.0.0",
+    "gulp-flatten": "0.3.1",
+    "gulp-help": "1.6.1",
+    "gulp-if": "2.0.1",
+    "gulp-import-css": "0.1.2",
+    "gulp-load-plugins": "1.2.4",
+    "gulp-minify-html": "1.0.6",
+    "gulp-mocha": "3.0.1",
+    "gulp-ng-annotate": "2.0.0",
+    "gulp-order": "1.1.1",
+    "gulp-print": "2.0.1",
+    "gulp-remember": "0.3.1",
+    "gulp-rev": "7.1.2",
+    "gulp-rev-replace": "0.4.3",
+    "gulp-sass": "2.3.2",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-tslint": "6.1.1",
+    "gulp-typescript": "2.13.6",
+    "gulp-uglify": "2.0.0",
+    "gulp-util": "3.0.7",
+    "main-bower-files": "2.13.1",
+    "run-sequence": "1.2.2",
+    "through2": "2.0.1",
+    "tslint": "3.15.1",
+    "typescript": "2.0.2",
+    "yargs": "5.0.0"
+  },
+  "build": {
+    "app-bundle-id": "Something",
+    "app-category-type": "web.app",
+    "iconUrl": "(windows only)"
+  },
+  "directories": {
+    "app": "public",
+    "buildResources": "public"
+  }
+}

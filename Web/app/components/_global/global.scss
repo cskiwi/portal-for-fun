@@ -1,0 +1,47 @@
+@import 'styles/imports';
+
+html, body {
+    padding: 0;
+    background-color: white;
+}
+
+md-card.md-default-theme {
+    background: white;
+}
+
+.md-button {
+    min-width: 0;
+}
+
+// fixing the sizing of the heights
+main, md-sidenav.md-locked-open {
+    min-height: calc(100vh - #{$navbar-height}) !important;
+}
+
+main > md-content > md-content {
+    padding-bottom: $footer-height;
+
+    & md-content {
+        display: inline;
+    }
+}
+
+#main {
+    & > md-content > div {
+        max-height: none;
+    }
+
+    md-card {
+        max-height: none;
+
+        md-table-container {
+            min-height: 100%;
+        }
+    }
+}
+
+.md-button.md-fab, md-fab-speed-dial {
+    &.md-fab-bottom-right, &.md-fab-bottom-left, &.md-fab-top-right, &.md-fab-top-left {
+        position: fixed;
+    }
+}

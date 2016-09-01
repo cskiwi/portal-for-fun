@@ -1,0 +1,12 @@
+node_modules
+bower_components
+vendor
+typings
+dist
+public
+.tmp
+.travis.yml
+.sass-cache
+npm-debug.log
+firebase-debug.log
+index.html

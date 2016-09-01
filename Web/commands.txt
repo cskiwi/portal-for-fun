@@ -1,0 +1,10 @@
+# installatie
+npm i
+bower i
+typings i
+
+# runs gulp + watcher + browsersync
+npm run dev
+
+# build for production
+npm run build

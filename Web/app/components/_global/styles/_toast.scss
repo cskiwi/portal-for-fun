@@ -1,0 +1,23 @@
+﻿@import 'variables';
+
+md-toast {
+  &.md-success-toast-theme {
+    .md-toast-content {
+      background-color: $toast-success-color;
+    }
+  }
+
+   &.md-warn-toast-theme {
+    .md-toast-content {
+      background-color: $toast-warn-color;
+    }
+  }
+
+  &.md-error-toast-theme {
+    .md-toast-content {
+      background-color: $toast-error-color;
+    }
+  }
+ 
+}
+ 

@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "users": {
+      ".read": true,
+      "$userId": {
+        ".read": "(auth != null) && ($userId === auth.uid)",
+        ".write": "(auth != null)  && ($userId === auth.uid)"
+      }
+    },
+    "clubs": {
+      ".read": true,
+      ".write": "root.child('userroles/'+ auth.uid + '/' + root.child('clubs/write_role').val()).exists()",
+      "$slugClub": {
+        ".write": "(auth != null) && root.child('userroles/'+ auth.uid + '/clubs/' + $slugClub).val() >= 3"
+      }
+    },
+    "userroles": {
+      "$userId": {
+        ".read": true,
+        ".write": "root.child('userroles/'+ auth.uid + '/_general/').val() >= 3",
+        "clubs": {
+          "$slugClub": {
+            ".read": "true",
+            ".write": "root.child('userroles/'+ auth.uid + '/clubs/' + $slugClub).val() >= 3"
+          }
+        }
+      }
+    }
+  }
+}

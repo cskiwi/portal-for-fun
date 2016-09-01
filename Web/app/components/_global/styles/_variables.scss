@@ -1,0 +1,62 @@
+$primary-color: #ff3700 !default; // headers
+$secundairy-color: white !default; // links
+$background-color: #efefef !default;
+
+// colors
+$primary-color-grey: darkblue !default;
+$primay-color-body-grey: #efefef !default;
+$primary-text-color: white !default;
+$secundairy-color: white !default;
+
+// Toasts
+$toast-success-color: green;
+$toast-warn-color: #db7406;
+$toast-error-color: #bb0101;
+
+// Header (Navbar)
+$navbar-color: $primary-color-grey;
+$navbar-color-text: white !default;
+$navbar-height: 64px !default;
+
+// footer
+$footer-height: 60px;
+
+// Navbar
+$sidebar-width: 200px !default;
+$sidebar-width-spacing: 20px !default;
+$sidebar-color: black;
+$sidebar-background-color : $primay-color-body-grey;
+$sidebar-active-color: $primary-color;
+$sidebar-active-background-color:rgba(0,0,0,.05);
+
+// Breakpoints
+$layout-breakpoint-xs: 600px !default;
+$layout-breakpoint-sm: 960px !default;
+$layout-breakpoint-md: 1280px !default;
+$layout-breakpoint-lg: 1920px !default;
+
+
+//chips
+$chip-navigation-border-color: darken($primary-color, 5%) !default;
+$chip-navigation-text-color: darken($primary-color, 5%) !default;
+$chip-navigation-background: rgba(0,0,0,0.1) !default;
+
+$chip-navigation-border-focus-color: darken($primary-color, 5%) !default;
+$chip-navigation-text-focus-color: darken($primary-color, 5%) !default;
+$chip-navigation-background-focus: rgba(0,0,0,0.1) !default;
+ 
+$chip-border-color: black !default;
+$chip-background: transparent !default;
+$chip-text-color: black !default;
+
+$chip-border-focus-color: black !default;
+$chip-text-focus-color: black !default;
+$chip-background-focus: rgba(0,0,0,0.1) !default;
+
+// filter
+$filter-height: 200 !default;
+$filter-delay-in: 0.5s !default;
+$filter-delay-out: 0.1s !default;
+
+// icons
+$material-design-icons-font-path : '../fonts/';
