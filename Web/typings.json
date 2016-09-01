@@ -4,9 +4,9 @@
     "globalDependencies": {
         "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#08ed4e9f1869e37e29514d862e0158b40e550232",
         "angular-deferred-bootstrap": "registry:dt/angular-deferred-bootstrap#0.1.9+20160505162344",
-        "angular-material": "registry:dt/angular-material#1.0.0-rc5.0+20160602130258",
+        "angular-material": "registry:dt/angular-material#1.1.0-rc5.0+20160805222743",
         "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#08ed4e9f1869e37e29514d862e0158b40e550232",
-        "cordova": "registry:dt/cordova#0.0.0+20160510234918",
+        "cordova": "registry:dt/cordova#0.0.0+20160607055823",
         "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#08ed4e9f1869e37e29514d862e0158b40e550232",
         "restangular": "registry:dt/restangular#1.5.0+20160626231743",
         "x2js/xml2json": "registry:dt/x2js/xml2json#0.0.0+20160316155526"
