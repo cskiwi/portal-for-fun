@@ -15,7 +15,7 @@ install:
 
 before_script:
   - echo "Installing required stuff!"
-  - cd Web && npm i && typings i --global && bower i && cd ..
+  - cd Web && npm i --dev && typings i --global && bower i && cd ..
 
 script:
   - echo "Building!"
