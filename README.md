@@ -1,5 +1,6 @@
 # portal-for-fun [![Build Status](https://travis-ci.org/cskiwi/portal-for-fun.svg?branch=master)](https://travis-ci.org/cskiwi/portal-for-fun)
-Fun fun fun :)
+A portal for sporters;
+this is still under heavy development
 
 
 ## Things!
