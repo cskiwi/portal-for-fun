@@ -24,7 +24,7 @@ script:
 # after_success: .travis/deploy.sh
 
 deploy:
-  deploy.skip_cleanup: true
+  skip_cleanup: true
   provider: script
   script: /bin/sh .travis/deploy.sh
   on:
