@@ -129,8 +129,7 @@ gulp.task('tslint', false, function () {
     return gulp
         .src(tsLintPaths)
         .pipe(verbosePrintFiles('lint'))
-        .pipe($.tslint())
-        .pipe($.tslint.report('verbose'));
+        .pipe($.tslint({formatter: 'verbose'}));
 });
 
 
