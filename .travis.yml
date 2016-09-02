@@ -21,4 +21,10 @@ script:
   - echo "Building!"
   - cd Web && npm run build && cd ..
 
-after_success: .travis/deploy.sh
+# after_success: .travis/deploy.sh
+
+deploy:
+  provider: script
+  script: .travis/deploy.sh
+  on:
+    branch: master
