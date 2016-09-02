@@ -27,4 +27,5 @@ deploy:
   provider: script
   script: .travis/deploy.sh
   on:
-    branch: master
+    tags: true
+    all_branches: true
