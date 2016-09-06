@@ -26,6 +26,7 @@ namespace app {
             authService.onAuthChanged(au => {
                 // set the global user (this will be null when logout)
                 me.user = au;
+                me.$log.info("Updated user", me.user);
                 if (au) {
                     userService.getUser(au.uid, true).then(u => {
                         me.user.AppUser = u;
