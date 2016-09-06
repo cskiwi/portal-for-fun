@@ -45,7 +45,9 @@ namespace app {
 
         public save() {
             let me: ClubEditController = this;
-            // me.clubService.updateClub(me.club);
+            me.clubService.updateClub(me.club).then(c => {
+                me.club = c;   
+            });
         }
 
     }
