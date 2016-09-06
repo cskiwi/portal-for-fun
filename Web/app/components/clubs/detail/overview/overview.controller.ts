@@ -45,6 +45,7 @@ namespace app {
             clubService.getClub($stateParams.id).then(c => {
                 me.loading = false;
                 me.club = c;
+                me.$log.debug('users', me.club.users)
             });
         }
 

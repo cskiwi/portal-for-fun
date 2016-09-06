@@ -65,13 +65,12 @@
                         </md-tab>
                         <md-tab label="Users">
                             <md-content class="md-padding">
-                                <h1 class="md-display-2">Tab Three</h1>
+                                <h1 class="md-display-2">Users</h1>
                                 <md-list flex>
-                                    <md-list-item  ng-repeat="item in vm.club.users" ng-click="null">
-                                        <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+                                    <md-list-item class="md-2-line" ng-repeat="item in vm.club.users" ng-click="null">
                                         <div class="md-list-item-text" layout="column">
-                                            <h3>{{ item.who }}</h3>
-                                            <p>{{ item.notes }}</p>
+                                            <h3>{{ item }}</h3> 
+                                            <p>Temporary stuff on users</p>
                                         </div>
                                     </md-list-item>
                                 </md-list>
