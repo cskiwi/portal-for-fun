@@ -1,6 +1,10 @@
 
 namespace app {
     'use strict';
+
+    interface IClubEditControllerStateParams extends IClubStateParams {
+
+    }
     /**
      * 
      * 
@@ -13,9 +17,17 @@ namespace app {
          * 
          * @param {angular.ILogService} $log
          */
-        constructor(private $log: angular.ILogService) {
+        constructor(
+            private $log: angular.ILogService,
+            private $stateParams: IClubEditControllerStateParams,
+            private $state: angular.ui.IStateService,
+            private clubService: IClubService
+        ) {
+            let me: ClubEditController = this;
             $log.debug('ClubEditController initialized');
-
+            if (!$stateParams.id) {
+                me.$state.go('app.club');
+            }
         }
 
 

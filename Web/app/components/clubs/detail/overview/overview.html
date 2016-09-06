@@ -7,10 +7,26 @@
                         <div class="md-headline">{{vm.club.name}}</div>
                         <div class="md-subhead">{{vm.club.description}}</div>
                     </md-card-title-text>
+                    <md-card-title-media ng-if="gvm.user">
+                        <md-media-sm>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                                    <md-icon md-menu-origin>more_vert</md-icon>
+                                </md-button>
+                                <md-menu-content>
+                                    <md-menu-item>
+                                        <md-button ui-sref="app.club.edit({id: vm.club.slug})">
+                                            <md-icon md-menu-align-target>edit</md-icon>
+                                            Edit
+                                        </md-button>
+                                    </md-menu-item>
+                                </md-menu-content>
+                            </md-menu>
+                        </md-media-sm>
+                    </md-card-title-media>
                 </md-card-title>
                 <md-card-content>
-                    Some info on the club
-                    Country: {{vm.club.counry}}!
+                    Some info on the club Country: {{vm.club.counry}}!
                 </md-card-content>
 
                 <md-card-actions layout="row" layout-align="end center">
