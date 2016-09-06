@@ -11,6 +11,14 @@ namespace app {
      * @class ClubEditController
      */
     class ClubEditController {
+        /**
+         * Our local instance of the club
+         * 
+         * @type {Club}
+         */
+        public club: Club;
+
+
         // @ngInject
         /**
          * Creates an instance of ClubEditController.
@@ -28,8 +36,17 @@ namespace app {
             if (!$stateParams.id) {
                 me.$state.go('app.club');
             }
+
+            clubService.getClub($stateParams.id).then(c => {
+                me.club = c;
+            });
         }
 
+
+        public save() {
+            let me: ClubEditController = this;
+            // me.clubService.updateClub(me.club);
+        }
 
     }
 

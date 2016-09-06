@@ -44,6 +44,15 @@ namespace app {
          * @returns {angular.IPromise<void>}
          */
         removeClub(indexOrElement: number | Club): angular.IPromise<void>;
+
+        /**
+         * 
+         * 
+         * @param {(Club)} Element
+         * @returns {angular.IPromise<void>}
+         */
+        updateClub(Element: Club): angular.IPromise<void>;
+
         /**
          * 
          * 
@@ -182,6 +191,33 @@ namespace app {
                     }).catch(def.reject);
                 } else {
                     me.$log.warn('existing club');
+                }
+            } else {
+                me.$log.error('Not logged in');
+                def.reject('not logged in');
+            }
+            return def.promise;
+        }
+
+        /**
+         * 
+         * 
+         * @param {Club} club
+         * @returns {angular.IPromise<Club>}
+         */
+        public updateClub(club: Club): angular.IPromise<Club> {
+            let me: ClubService = this;
+            let def: angular.IDeferred<Club> = me.$q.defer();
+
+            if (me.authService.isLoggedIn() !== undefined) {
+                let updates: any = {};
+                if (me.clubs[club.slug] !== null) {
+                    updates['/clubs/' + club.slug] = club;
+                    firebase.database().ref().update(updates).then(r => {
+                        return me.getClub(name);
+                    }).catch(def.reject);
+                } else {
+                    me.$log.warn('Club not found!');
                 }
             } else {
                 me.$log.error('Not logged in');

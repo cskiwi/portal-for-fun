@@ -13,7 +13,7 @@ namespace app {
      */
     class ClubDetailOverviewController {
         /**
-         * 
+         * Our local instance of the club
          * 
          * @type {Club}
          */
