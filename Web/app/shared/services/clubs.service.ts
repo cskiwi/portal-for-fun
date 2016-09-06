@@ -51,7 +51,7 @@ namespace app {
          * @param {(Club)} Element
          * @returns {angular.IPromise<void>}
          */
-        updateClub(Element: Club): angular.IPromise<void>;
+        updateClub(club: Club): angular.IPromise<Club>;
 
         /**
          * 
