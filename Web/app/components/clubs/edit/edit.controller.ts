@@ -17,6 +17,7 @@ namespace app {
          * @type {Club}
          */
         public club: Club;
+        public loading: Boolean;
 
 
         // @ngInject
@@ -33,11 +34,14 @@ namespace app {
         ) {
             let me: ClubEditController = this;
             $log.debug('ClubEditController initialized');
+
             if (!$stateParams.id) {
                 me.$state.go('app.club');
             }
 
+            me.loading = true;
             clubService.getClub($stateParams.id).then(c => {
+                me.loading = false;
                 me.club = c;
             });
         }
@@ -46,7 +50,7 @@ namespace app {
         public save() {
             let me: ClubEditController = this;
             me.clubService.updateClub(me.club).then(c => {
-                me.club = c;   
+                me.club = c;
             });
         }
 

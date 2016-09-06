@@ -1,9 +1,8 @@
-
 namespace app {
     'use strict';
 
     interface IClubDetailOverviewStateParams extends IClubStateParams {
-      
+
     }
 
     /**
@@ -13,13 +12,14 @@ namespace app {
      */
     class ClubDetailOverviewController {
         /**
-         * Our local instance of the club
+         * Our instance of the user
          * 
          * @type {Club}
          */
         public club: Club;
 
-        // @ngInject
+        public loading: Boolean;
+
         /**
          * Creates an instance of ClubDetailOverviewController.
          * 
@@ -27,6 +27,7 @@ namespace app {
          * @param {IClubDetailOverviewStateParams} $stateParams
          * @param {angular.ui.IStateService} $state
          * @param {IClubService} clubService
+         *
          */
         constructor(
             private $log: angular.ILogService,
@@ -40,8 +41,9 @@ namespace app {
             if (!$stateParams.id) {
                 me.$state.go('app.club');
             }
-
+            me.loading = true;
             clubService.getClub($stateParams.id).then(c => {
+                me.loading = false;
                 me.club = c;
             });
         }
