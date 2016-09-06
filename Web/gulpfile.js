@@ -180,6 +180,13 @@ gulp.task('static', false, function () {
         .pipe(verbosePrintFiles('static'))
         .pipe(gulp.dest(path.join(paths.clientBuild, '/')));
 });
+
+
+gulp.task('index.html', false, function(){
+    return gulp.src(path.join(paths.clientSrc, 'index.html'))
+        .pipe(verbosePrintFiles('index.html'))
+        .pipe(gulp.dest(path.join(paths.clientBuild, '/')));
+})
 /**
  * config files copy
  */
@@ -209,7 +216,7 @@ gulp.task('html', false, function () {
  * Cache-bust asset files
  */
 gulp.task('cachebust', false, [
-    'partials', 'vendor-scripts', 'app-scripts',
+    'index.html', 'partials', 'vendor-scripts', 'app-scripts',
     'vendor-styles', 'app-styles',
     'vendor-fonts', 'static', 'html', 'config'
 ], function () {
