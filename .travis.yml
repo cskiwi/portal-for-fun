@@ -21,8 +21,6 @@ script:
   - echo "Building!"
   - cd Web && npm run build && cd ..
 
-# after_success: .travis/deploy.sh
-
 deploy:
   skip_cleanup: true
   provider: script
@@ -30,3 +28,5 @@ deploy:
   on:
     tags: true
     all_branches: true
+notifications:
+  email: false
