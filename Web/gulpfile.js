@@ -118,9 +118,9 @@ function scriptProcessing(stream, bundleFile) {
     return stream
         .pipe($.if(!isProduction, $.sourcemaps.init()))
         .pipe($.concat(bundleFile))
-        .pipe($.if(isProduction, $.uglify({ preserveComments: $.uglifySaveLicense })))
+        .pipe($.if(isProduction, $.uglify({ preserveComments: $.uglifySaveLicense, mangle: false })))
         .on('error', errorHandler('uglify'))
-        .pipe($.if(!isProduction, $.sourcemaps.write('maps')))
+        .pipe($.if(!isProduction, $.sourcemaps.write()))
         .pipe(gulp.dest(path.join(paths.clientBuild, '/js/')));
 }
 
