@@ -1,19 +1,9 @@
 
 namespace app {
     'use strict';
-    /**
-     * 
-     * 
-     * @interface IClubDetailOverviewStateParams
-     * @extends {angular.ui.IStateParamsService}
-     */
-    interface IClubDetailOverviewStateParams extends angular.ui.IStateParamsService {
-        /**
-         * 
-         * 
-         * @type {string}
-         */
-        id: string;
+
+    interface IClubDetailOverviewStateParams extends IClubStateParams {
+      
     }
 
     /**
@@ -23,7 +13,7 @@ namespace app {
      */
     class ClubDetailOverviewController {
         /**
-         * 
+         * Our local instance of the club
          * 
          * @type {Club}
          */

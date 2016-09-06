@@ -1,6 +1,6 @@
 {
   "name": "portal-for-fun",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "A portal for sporters",
   "main": "index.js",
   "authors": [],
@@ -35,6 +35,6 @@
     "angular-material": "1.1.0",
     "firebase": "3.3.0",
     "abdmob/x2js": "1.2.0",
-    "material-design-icons-iconfont": "2.0.4"
+    "material-design-icons-iconfont": "2.0.4" 
   }
 }
